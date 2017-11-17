@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>婚纱摄影</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-image: url("images/002.jpg");
+            background-position: center;
+             /*background-repeat: no-repeat;*/
+            width: 100%; height: 600px;
+            background-size: cover;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            overflow:hidden; 
+        }
+        #box{
+            width: 300px;
+            height: 300px;
+            /*border: 1px solid red;*/
+            margin: 50px 200px;
+            /*position: relative;*/
+        }
+        .mask {
+            width: 175px;
+            height: 175px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+
+        #top {
+
+            position: relative;
+
+        }
+        .big {
+            width: 400px;
+            height: 450px;
+            position: absolute;
+            top: -10px;
+            left: 700px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            /*display: none;*/
+        }
+        .box2{
+            width: 100%;
+            overflow: hidden;
+        }
+        #btn {
+            width: 5000px;
+            height: 100px;
+            /*border: 1px solid blue;*/
+            position: relative;
+            margin-top: 130px;
+
+        }
+
+        #btn ul {
+            width: 5000px;
+        }
+
+        #btn li {
+            float: left;
+            padding-left:40px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            left: 5px;
+            top: 85%;
+            margin-top: -20px;
+            /*background: #000;*/
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 60px;
+            color: green;
+            opacity: 0.8;
+            /*border: 1px solid #fff;*/
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+
+    </style>
+   <script src="jquery1.11.1.js"></script>
+    <script>
+        window.onload = function () {
+            var box = document.getElementById("box");
+            var top = document.getElementById("top");
+            var mask = document.getElementById("mask");
+            var big = document.getElementById("big");
+            var bigImg = document.getElementById("bigImg");
+
+            top.onmouseenter = function () {
+                show(mask);
+                show(big);
+            }
+            top.onmouseleave = function () {
+                hide(mask);
+                hide(big);
+            }
+            top.onmousemove = function (event) {
+                event = event || window.event;
+                var pagex = event.pageX || event.clientX + scroll().left;
+                var pagey = event.pageY || event.clientY + scroll().top;
+                var topx = box.offsetLeft;
+                var topy = box.offsetTop;
+
+                var x = pagex - topx - mask.offsetWidth/2;
+                var y = pagey - topy - mask.offsetHeight/2;
+                if(x<0){
+                    x = 0;
+                }
+                if(x>top.offsetWidth-mask.offsetWidth){
+                    x = top.offsetWidth-mask.offsetWidth;
+                }
+                if(y<0){
+                    y = 0;
+                }
+                if(y>top.offsetHeight-mask.offsetHeight){
+                    y = top.offsetHeight-mask.offsetHeight;
+                }
+                mask.style.left = x+"px";
+                mask.style.top = y+"px";
+                var bili = bigImg.offsetWidth/top.offsetWidth;
+                var xx = bili*x;
+                var yy = bili*y;
+                bigImg.style.marginTop = -yy+"px";
+                bigImg.style.marginLeft = -xx+"px";
+            }
+
+
+
+
+
+
+
+            var ul = document.getElementById("ul");
+            var aArr = ul.getElementsByTagName("a");
+            var images = document.getElementById("images");
+            var bigImg=document.getElementById("bigImg")
+
+            for (var i = 0; i < aArr.length; i++) {
+                aArr[i].onclick = function () {
+                    images.src =bigImg.src= this.href;
+                    console.log(i);
+                    //禁止a链接跳转;
+                    return false;
+                }
+            }
+            var left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var liArr = document.getElementsByTagName("li");
+            var btn = document.getElementById("btn");
+            var imgWidth = liArr[0].offsetWidth
+            index = 0;
+            right.onclick = function () {
+                index++;
+                if (index ==5) {
+                    index = 4;
+                    alert('最后一张');
+                    return;
+                }
+                animate(btn, -index * imgWidth)
+            }
+            left.onclick = function () {
+                index--;
+                if (index ==-1) {
+                    index =0 ;
+                    alert('第一张');
+                    return;
+                }
+                animate(btn, -index * imgWidth)
+            }
+            function animate(ele, target) {
+                clearInterval(ele.timer);
+                ele.timer = setInterval(function () {
+                    var step = target > ele.offsetLeft ? 10 : -10;
+                    ele.style.left = ele.offsetLeft + step + "px";
+                    console.log(1);
+                    if (Math.abs(target - ele.offsetLeft) <= Math.abs(step)) {
+                        ele.style.left = target + "px";
+                        clearInterval(ele.timer);
+                    }
+                }, 10);
+            }
+        }
+</script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/snow.js"></script>
+    <script>createSnow('', 60);</script>
+<body>
+<div id='box'>
+<div id="top">
+    <div class="mask" id="mask"></div>
+    <img id="images" src="images/12.jpg" width="300px" height="350px"/>
+</div>
+    <div class="big" id="big">
+        <img id="bigImg" src="images/12.jpg" style="position: absolute;" />
+    </div>
+</div>
+<div class='box2'>
+<div id="btn">
+    <ul id="ul">
+        <li><a href="images/12.jpg"><img src="images/12.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/23.jpg"><img src="images/23.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/14.jpg"><img src="images/14.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/15.jpg"><img src="images/15.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/16.jpg"><img src="images/16.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/17.jpg"><img src="images/17.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/18.jpg"><img src="images/18.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/19.jpg"><img src="images/19.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/20.jpg"><img src="images/20.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/21.jpg"><img src="images/21.jpg" width="150" height="100"/></a></li>
+        <li><a href="images/22.jpg"><img src="images/22.jpg" width="150" height="100"/></a></li>
+    </ul>
+    <div id="arr">
+        <span id="left"><</span>
+        <span id="right">></span>
+    </div>
+</div>
+</div>    
+<!-- <audio src="终于等到你.mp3" loop autoplay></audio> -->
+</body>
+</html>

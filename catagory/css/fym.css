@@ -1,0 +1,187 @@
+.box12{
+    height: 158px;
+    border: 1px solid skyblue;
+
+
+
+
+
+}
+.box12 .nav12 {
+    height: 44px;
+
+    background-color:#fafafa;
+}
+.nav12 li{
+    float: left;
+    display: block;
+    width: 298px;
+    height: 44px;
+    text-align: center;
+    line-height: 36px;
+    color: #999;
+    font-size: 16px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+    cursor: pointer;
+
+
+
+}
+
+.nav12 li:last-child{
+    border-right: 0;
+}
+
+
+.nav12_z{
+    height: 44px;
+    position: absolute;
+    padding: 0 19px;
+    display: none;
+
+
+}
+
+
+
+.box12 .color1 li {
+    color: skyblue;
+
+}
+ .box12 .color2 li {
+    color: lightgreen ;
+}
+.box12 .color3 li {
+    color: pink ;
+}
+.box12 .color4 li {
+    color: yellow ;
+}
+.nav12_z ul{
+
+
+}
+.nav12_z li {
+
+    float: left;
+    height: 42px;
+    line-height: 44px;
+    width: 60px;
+    color: #666;
+    font-size: 16px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+    cursor: pointer;
+
+
+}
+.nav12_z span {
+    float: left;
+    width: 46px;
+    height: 44px;
+    line-height: 44px;
+    color: #999;
+    font-size: 18px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+}
+.nav12_z span:nth-child(2){
+    margin-left: -44px;
+}
+.nav12_z  a{
+    width:44px ;
+    height: 22px;
+    float: left; ;
+    display: block;
+    border: 1px solid #ff5c5c;
+    border-radius: 4px;
+    color: red;
+    text-align: center;
+    margin: 0px 23px;
+    margin-top: 10px;
+    line-height: 22px;
+    font-size: 15px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+
+
+
+}
+
+
+/*Ð§¹ûÍ¼*/
+.hezi {
+
+margin-bottom: 10px;
+    height: 400px;
+
+}
+.hezi a {
+
+
+    width: 233px;
+    height: 400px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+
+
+.hezi  b{
+    position: absolute;
+    top: 370px;
+    left: 62px;
+
+}
+.hezi span{
+    width: 233px;;
+    height: 400px;
+    background:RGBA(0,0,0,0.3);
+    opacity: 0.6;
+    display: block;
+    position: absolute;
+    top: 435px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    color: white;
+    box12-sizing: border-box12;
+
+
+}
+
+.hezi a:nth-child(4) span{
+    position: absolute;
+    left: 233px;
+    top: 0px;
+
+
+}
+.hezi a:nth-child(5) span{
+     position: absolute;
+     left:233px;
+     top: 0px;
+
+
+ }
+#hezi2 a  span{
+    position: absolute;
+    left:0px;
+    top: -435px;
+    height: 350px;
+
+}
+#hezi2 a:nth-child(4) span {
+    position: absolute;
+    left: -233px;
+    top:0px;
+
+}
+#hezi2 a:nth-child(5) span {
+    position: absolute;
+    left: -233px;
+    top: 0px;
+}

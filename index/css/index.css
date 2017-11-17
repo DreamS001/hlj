@@ -1,0 +1,796 @@
+.Lb{
+    height: 560px;
+    /*background: red;*/
+    margin-bottom: 20px;
+}
+.Lb .S-nav{
+    width: 205px;
+    height: 558px;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    background: #fff3f4;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+    border-right: 0;
+    position: relative;
+}
+.Lb .S-nav .dl{
+    height: 62px;
+    text-align: center;
+    font: 700 16px/62px simun;
+    cursor: pointer;
+    color: #666;
+}
+.Lb .S-nav .kb{
+    position: absolute;
+    left: 205px;
+    top: 0;
+    width: 135px;
+    height: 558px;
+    background: #ebbad4;
+    display: none;
+    z-index: 1;
+}
+.Lb .S-nav .bg{
+    background-color: #fff;
+}
+
+#lbt{
+    width: 768px;
+    height: 330px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+#ul{
+    width: 5000px;
+    position: absolute;
+}
+#ul li{
+    float: left;
+}
+#ol{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:10px;
+}
+#ol li{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    font: 16px/20px simsun;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+#ol .current{
+    background: orange;
+    color:#fff;
+}
+#arr{
+    display: none;
+}
+#arr span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 50px;
+    background: rgba(0,0,0,.5);
+    font: 700 50px/50px simsun;
+    text-align: center;
+    cursor: pointer;
+}
+#arr #right{
+    right: 0;
+}
+
+.adC{
+    height: 205px;
+    width: 768px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin: 0 10px;
+    background:blue;
+    font: 700 50px/205px simsun;
+    text-align: center;
+}
+.L-top{
+    width: 198px;
+    height: 220px;
+    border: 1px solid #ccc;
+    float: right;
+    margin-top: 10px;
+    border-top: 0px;
+    border-right: 0px;
+
+}
+.L-top li{
+    position: relative;
+    width: 98px;
+    height: 73px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+}
+.L-top li i{
+    width: 98px;
+    height: 73px;
+    display: block;
+    font: 700 60px/73px '微软雅黑';
+    text-align: center;
+}
+.L-top li span{
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 98px;
+    height: 73px;
+    background-color: yellow;
+    text-align: center;
+    font: 20px/73px simsun;
+}
+.L-top li s{
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 98px;
+    height: 73px;
+    background-color: red;
+    text-align: center;
+    font: 20px/73px '微软雅黑';
+    text-decoration: none;
+}
+.L-bot{
+    position: relative;
+    width: 198px;
+    height: 204px;
+    border: 1px solid #ccc;
+    float: right;
+    margin-top: 12px;
+}
+.Img{
+    width: 198px;
+    height: 204px;
+    background: url("../images/dog.jpg") center;
+    background-size: contain;
+}
+.L-bot .Hf{
+    position: absolute;
+    top: 0;
+    width: 198px;
+    height: 204px;
+    display: none;
+    /*background: rgba(255,255,255,.6);*/
+    background-color: black;
+}
+
+
+
+
+/*心*/
+.heart3d{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:100px;
+    height:160px;
+    transform-style:preserve-3d;
+    animation:rot 10s linear infinite;/*css3自定义动画:名称  时间 匀速  无限重复*/
+}
+@keyframes rot{
+    to{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+.heart{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100px;
+    height:160px;
+    border:1px solid red;
+    border-left:0;
+    border-bottom:0;
+    border-radius:50% 50% 0/40% 50% 0;
+}
+.cube{
+    position:relative;
+    width:50px;
+    height:50px;
+    transform-style:preserve-3d;
+    transform:translateX(25px) translateY(54px) translateZ(25px);
+}
+.cube div{
+    position:absolute;
+    width:50px;
+    height:50px;
+}
+.cube div:nth-child(1){/*css3结构伪类选择器*/
+    left:0;
+    top:-50px;
+    transform-origin:bottom;
+    transform:rotateX(90deg);/*css3变换:X轴旋转90deg*/
+}
+.cube div:nth-child(2){
+    left:0;
+    top:50px;
+    transform-origin:top;
+    transform:rotateX(-90deg);
+}
+.cube div:nth-child(3){
+    left:-50px;
+    top:0;
+    transform-origin:right;
+    transform:rotateY(-90deg);
+}
+.cube div:nth-child(4){
+    left:50px;
+    top:0;
+    transform-origin:left;
+    transform:rotateY(90deg);
+}
+.cube div:nth-child(5){
+    left:0;
+    top:0;
+}
+.cube div:nth-child(6){
+    left:0;
+    top:0;
+    transform:translateZ(-50px);/*沿着Z轴往里面移动*/
+}
+.cube div img{
+    width:50px;
+    height:50px;
+}
+
+
+
+
+
+
+
+
+.L-centen{
+    width: 198px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: pink;
+    color: blue;
+    float: right;
+    margin-top: 8px;
+    font: 700 20px/100px simsun;
+    text-align: center;
+}
+.L-centen:hover{
+    background: red;
+    color: #fff;
+}
+.conten{
+    height: 2162px;
+    margin-bottom: 80px;
+    border-top: 1px solid #fff;
+}
+
+.conten .Jh-Style{
+    width: 100%;
+    height: 472px;
+    margin-top: 20px;
+}
+.Jh-Style .l-Style{
+    width: 960px;
+    height: 100%;
+    float: left;
+}
+.Jh-Style .l-Style .tupan ul{
+    margin-left: 5px;
+}
+.Jh-Style .l-Style .tupan li{
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.Jh-Style .r-Style{
+    width: 210px;
+    height: 470px;
+    position: relative;
+    border: 1px solid #ccc;
+    float: right;
+    background: url("../images/y2%20(1).jpg") no-repeat;
+    background-size: 100%  100%;
+}
+.conten .Jh-Hotel{
+    width: 100%;
+    height: 490px;
+    margin-top: 20px;
+}
+.Jh-Hotel .l-Hotel{
+    width: 960px;
+    height: 100%;
+    float: left;
+}
+.Jh-Hotel .l-Hotel .tupan li{
+    float: left;
+    width: 228px;
+    height: 200px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+.Jh-Hotel .l-Hotel .tupan li .xx{
+    width: 228px;
+    height: 58px;
+    background-color: #fff;
+}
+.Jh-Hotel .l-Hotel .tupan li .xx span{
+    display: block;
+    font: 12px/21px 'simsun';
+    text-align: center;
+    margin-left: 5px;
+}
+.Jh-Hotel .l-Hotel .tupan li .xx p{
+    font: 700 18px/25px 'simsun';
+}
+.Jh-Hotel .l-Hotel .tupan li .xx p s{
+    font-size: 24px;
+    color: red;
+}
+.Jh-Hotel .r-Hotel{
+    width: 210px;
+    height: 488px;
+    border: 1px solid #ccc;
+    float: right;
+    background: url("../images/y2%20(2).jpg");
+    background-size: 100% 100%;
+}
+.conten .Jh-Plan{
+    width: 100%;
+    height: 321px;
+    margin-top: 20px;
+}
+.Jh-Plan .tit{
+    width: 100%;
+    height: 24px;
+    margin-bottom: 20px;
+}
+.Jh-Plan .tit h1{
+    font: 700 22px/24px '微软雅黑';
+    width: 163px;
+    border-left: 2px solid red;
+    padding: 0 10px;
+    box-sizing: border-box;
+    float: left;
+}
+.Jh-Plan .tit span{
+    float: right;
+    font-size: 14px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.Jh-Plan ul li{
+    width: 280px;
+    height: 252px;
+    float: left;
+    background: green;
+    margin-right: 26px;
+    position: relative;
+}
+/*.Jh-Plan ul li a img{*/
+    /*transition: all 0.6s;*/
+/*}*/
+/*.Jh-Plan ul li a img:hover {*/
+    /*transform: scale(1.5);*/
+/*}*/
+.yin{
+    position: absolute;
+    top: 0;
+    width: 280px;
+    height: 180px;
+    background: rgba(255,255,255,.6);
+    display: none;
+}
+.Jh-Plan ul li:last-child{
+    float: right;
+    margin-right: 0;
+}
+.Jh-Plan ul li .one{
+    width: 280px;
+    height: 72px;
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.Jh-Plan ul li .one a{
+    font: 700 16px/16px 'simsun';
+}
+.Jh-Plan ul li .one .o-t{
+    margin-top: 10px;
+    width: 248px;
+    height: 16px;
+}
+.Jh-Plan ul li .one .o-t .o-l{
+    float: left;
+}
+.Jh-Plan ul li .one .o-t .o-r{
+    float: right;
+}
+
+
+.conten .Jh-Show{
+    width: 100%;
+    height: 564px;
+}
+.tit h1{
+    float: left;
+    width: 139px;
+    height: 22px;
+    font-size: 22px;
+    border-left: 2px solid red;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+ .tit {
+    margin-bottom: 20px;
+}
+ .tit span{
+    float: right;
+    font-size: 14px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+ .S-list{
+    float: left;
+    width: 345px;
+    height: 20px;
+
+}
+.Jh-Show .S-list li{
+    float: left;
+    padding: 0 10px;
+    margin-top: 5px;
+    font: 15px/20px simsun;
+    box-sizing: border-box;
+}
+.S-show{
+    height: 520px;
+}
+.S-show .l-s{
+    width: 925px;
+    height: 500px;
+    float: left;
+    background: #fff;
+}
+.S-show .l-s .tupan ul{
+    margin-left: 5px;
+}
+.S-show .l-s .tupan li{
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+.S-show .l-s .tupan li p{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: red;
+    font: 700 20px/30px 'simsun';
+}
+.S-show .r-s{
+    width: 275px;
+    height: 500px;
+    background: orange;
+    float: right;
+}
+
+.Jh-Wenzi{
+    height: 255px;
+}
+.Jh-Wenzi .text-box1{
+    width: 360px;
+    height: 255px;
+    background: pink;
+    float: left;
+}
+.Jh-Wenzi .text-box2{
+    /*margin-top: 40px;*/
+    width: 60px;
+    height: 210px;
+    float: left;
+    text-align: center;
+}
+.Jh-Wenzi .text-box2 span{
+    display: inline-block;
+    width: 1px;
+    height: 165px;
+    margin-top: 40px;
+    border-right: 1px dashed #ccc;
+}
+
+/*楼层跳跃*/
+#floor{
+    width: 60px;
+    height: 250px;
+    border-radius: 10px;
+    position: fixed;
+    top: 250px;
+    left: 10px;
+    background: red;
+}
+#floor li{
+    height: 50px;
+    text-align: center;
+    font: 700 20px/50px '微软雅黑';
+    position: relative;
+}
+/*#floor .f-y{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 58px;*/
+    /*height: 48px;*/
+    /*border: 1px solid red;*/
+    /*background: green;*/
+    /*display: none;*/
+/*}*/
+#floor .L-bg{
+    background-color: yellow;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#floor .back{
+    height: 5px;
+    /*border:1px solid #DEDEDE;*/
+    font: 700 20px/50px '微软雅黑';
+    /*margin-bottom: 5px;*/
+    text-align: center;
+    cursor: pointer;
+}
+/*底部*/
+.foot{
+    width: 100%;
+    height: 412px;
+    background: #fafafa;
+    border-top: 1px solid #e7e7e7;
+}
+.foot-me div{
+    float: left;
+    margin-top: 30px;
+    height: 180px;
+}
+.foot-me .ul1 {
+    width: 280px;
+}
+.foot-me div h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.foot-me div li {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #666;
+}
+.foot-me div .tel {
+    color: #ff5165;
+    font-size: 28px;
+    font-family: Arial;
+}
+.foot-me .ul2 {
+    width: 200px;
+}
+.foot-me a {
+    cursor: pointer;
+    color: #666;
+}
+.foot-me .ul3 {
+    width: 180px;
+}
+.foot-me .ul4 {
+    width: 180px;
+}
+.foot-me .ul5 {
+    width: 360px;
+}
+.ul2 img{
+    width: 80px;
+    height: 80px;
+}
+.foot-me .ul3 .weichat::before {
+    content: "";
+    width: 19px;
+    height: 15px;
+    background: url(../images/精灵图.png);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-position: -378px 0;
+    float: left;
+    margin-right: 5px;
+}
+.foot-me .weichat {
+    position: relative;
+}
+.foot-me .weichat dl {
+
+    position: absolute;
+    left: 94px;
+    width: 130px;
+    height: 138px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    top: 0;
+    display: none;
+
+}
+.ul3 a:hover {
+    color:red;
+}
+.ul4 a:hover{
+    color:red;
+}
+.weichat dl .dt1 {
+
+    width: 0px;
+    height: 0px;
+    border-right: 6px solid #e7e7e7;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    margin-left: -6px;
+
+}
+.weichat dl .dt2 {
+
+    width: 0px;
+    height: 0px;
+    border-right: 4px solid #fff;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-left: -4px;
+    margin-top: -10px;
+
+}
+.weichat dl dd {
+
+    width: 100px;
+    float: left;
+    text-align: center;
+    margin: 10px 15px;
+
+}
+.weichat dl dd img {
+
+    width: 80px;
+    height: 80px;
+
+}
+.foot-me .ul3 .xinl::before {
+
+    content: "";
+    width: 19px;
+    height: 15px;
+    background: url(../images/精灵图.png);
+    background-position: -355px 0;
+    float: left;
+    margin-right: 5px;
+
+}
+.hotcitys dt {
+    color:#333;
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+
+}
+.hotcitys dd {
+
+    width: 1200px;
+    float: left;
+
+}
+.hotcitys dd a {
+
+    margin: 0 10px 10px 0;
+    white-space: pre;
+    float: left;
+    cursor: pointer;
+    width: 72px;
+    overflow: hidden;
+
+}
+.hotcitys dd a:hover{
+    color: #ff273c;
+}
+.linkcom {
+
+    width: 100%;
+    min-width: 1200px;
+    background: #333;
+    color: #ccc;
+    padding: 20px 0;
+    margin-top: 20px;
+
+}
+.link {
+
+    width: 1200px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+
+}
+.link_title {
+
+    float: left;
+    width: 80px;
+
+}
+.link_list_cont {
+
+    float: left;
+    position: relative;
+    width: 1120px;
+    height: 30px;
+    overflow: hidden;
+
+}
+.link_list {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0;
+
+}
+.link_items {
+
+    display: inline-block;
+
+}
+.link_items a {
+
+    display: inline-block;
+    padding: 0 4px;
+    font-size: 14px;
+    color: #ccc;
+
+}
+.linkcom p {
+
+    text-align: center;
+    line-height: 30px;
+
+}
+.yx{
+    position: relative;
+}
+.sc{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    /*border: 1px solid red;*/
+    background: #fff;
+    font: 25px/25px simsun;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+

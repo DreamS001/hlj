@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="base.css"/>
+        <link rel="stylesheet" href="zuce.css"/>
+        <style>
+            .right{
+                color: green;
+                
+            }
+            .wrong{
+                color: red;
+            }
+            
+            
+        </style>
+
+    </head>
+
+    <script>
+        window.onload = function () {
+            //需求：表单校验;
+                    //正则表达式一个都不用我们写了！
+
+            //老三步,按照前两个案例设置;
+
+            var inpArr = document.querySelectorAll("input");
+            var password = document.getElementById("password");
+            //校验QQ号;
+            fn(inpArr[0],/^[1-9][0-9]{4,11}$/);
+            //校验手机号;
+            fn(inpArr[1],/^((13[0-9])|(15[^4,\D])|(18[0-9]))\d{8}$/);
+            //校验邮箱号;
+            fn(inpArr[2],/^[\w\-\.]+\@[\w]+\.[\w]{2,4}$/);
+            校验座机号;
+            fn(inpArr[3],/^0\d{2}-\d{8}$|^0\d{3}-\d{7}$/);
+            //校验用户名;
+            fn(inpArr[4],/^[\w$-]{3,16}$/);
+
+            //校验密码
+            inpArr[5].onblur = function () {
+                //bug：不输入内容，不进行判断;
+                if(this.value == ""){
+                    return;
+                }
+
+                //书写正则
+                if(/^[\$a-zA-Z0-9_-]{6,18}$/.test(this.value)){
+                    //控制后面的span标签，让他显示正确并设置内容;
+                    this.nextSibling.innerHTML = "恭喜您，输入正确";
+                    this.nextSibling.className = "right";
+
+                    //拓展：密码强度;
+                        //从严密到低级来;  因为满足高级的同样也满足低级;
+                    if(/^[A-Za-z0-9]+[_$]+[A-Za-z0-9]*$/.test(this.value)){
+                        //密码强度最高;
+                        password.className = "pwd str4";
+                    }else if(/^([a-z].*[0-9])|([A-Z].*[0-9])|([0-9].*[a-zA-Z])$/.test(this.value)){
+                        password.className = "pwd str3";
+                    }else if(/^([a-z].*[A-Z])|([A-Z].*[a-z])$/.test(this.value)) {
+                        password.className = "pwd str2";
+                    }else{
+                        password.className = "pwd str1";
+                    }
+                }else{
+                    //控制后面的span标签，让他显示错误并设置内容;
+                    this.nextSibling.innerHTML = "对不起，格式错误！";
+                    this.nextSibling.className = "wrong";
+                }
+            }
+
+
+
+
+
+            //代码复用性特别强，所以封装起来;
+            function fn(ele,reg){
+                ele.onblur = function () {
+                    //bug：不输入内容，不进行判断;
+                    if(this.value == ""){
+                        return;
+                    }
+
+                    //书写正则
+                    if(reg.test(this.value)){
+                        //控制后面的span标签，让他显示正确并设置内容;
+                        this.nextSibling.innerHTML = "恭喜您，输入正确";
+                        this.nextSibling.className = "right";
+                    }else{
+                        //控制后面的span标签，让他显示错误并设置内容;
+                        this.nextSibling.innerHTML = "对不起，格式错误！";
+                        this.nextSibling.className = "wrong";
+                    }
+                }
+            }
+
+        }
+    </script>
+<body>
+
+    <!--头部-->
+    <div class="nav">
+        <div class="w">
+            <div class="logo">
+                <img src="img/o_1arhqdnirhdl1nvtisck51koa7.png" alt=""/>
+            </div>
+        </div>
+    </div>
+
+
+    <!--中部-->
+    <div class="container">
+        <label for="inp1">Q Q:</label><input type="text" id="inp1" ><span>输入正确的QQ号码</span><br>
+        <label for="inp2">手机:</label><input type="text" id="inp2"><span>输入13位手机号码</span><br>
+        <label for="inp3">邮箱:</label><input type="text" id="inp3"><span>输入正确邮箱</span><br>
+        <!--<label for="inp4">座机</label><input type="text" id="inp4"><span>输入您的座机</span><br>-->
+        <!--<label for="inp5">账号</label><input type="text" id="inp5"><span>亲输入您的账号</span><br>-->
+        <!--<label for="inp6">密码</label><input type="text" id="inp6"><span>请输入您的密码</span><br>-->
+
+        <!--<div id="password" class="pwd"></div>-->
+    </div>
+
+
+
+
+
+<!--尾部-->
+
+    <div class="foot">
+        <div class="w">
+            <div class="foot1">
+                <div class="ul1">
+                    <h3>婚礼纪客服热线</h3>
+                    <ul>
+                        <li>工作时间：每日9:00~23:00</li>
+                        <li class="tel">400-159-9090</li>
+                    </ul>
+                </div>
+                <div class="ul2">
+                    <h3>下载婚礼纪手机版</h3>
+                    <img src="img/o_19vq1b9ka1u3aan01s4n1v8qpe9k.png" alt=""/>
+                </div>
+                <div class="ul3">
+                    <h3>关注我们</h3>
+                    <a href="#">微信公众号</a><br><br>
+                    <a href="#">新浪微博</a>
+
+                </div>
+                <div class="ul4">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li>
+                            <a rel="nofollow" href="http://www.hunliji.com/home/about.html" target="_blank">关于婚礼纪</a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="http://www.lagou.com/gongsi/542.html" target="_blank">加入我们</a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="http://www.hunliji.com/home/contacts.html" target="_blank">联系我们</a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="http://www.hunliji.com/p/wedding/Public/web/Partner/partner_surface.html" target="_blank">合伙人招募</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ul5" >
+
+                    <h3>联系我们</h3>
+                    <ul>
+                        <!--<li>商务、媒体合作QQ：2652330317</<li>-->
+                        <li>反馈邮箱：support@hunliji.com</li><br>
+                        <li>通讯地址：浙江省杭州市西湖区文一西路98号数娱大厦408</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="foot2">
+                <dl>
+                    <dt> 热门城市：</dt>
+                    <dd>
+                        <a href="#">北京婚纱摄影</a>
+                        <a href="#">上海婚纱摄影</a>
+                        <a href="#">杭州婚纱摄影</a>
+                        <a href="#">成都婚纱摄影</a>
+                        <a href="#">深圳婚纱摄影</a>
+                        <a href="#">武汉婚纱摄影</a>
+                        <a href="#">三亚婚纱摄影</a>
+                        <a href="#">厦门婚纱摄影</a>
+                        <a href="#">广州婚纱摄影</a>
+                        <a href="#">南京婚纱摄影</a>
+                        <a href="#">重庆婚纱摄影</a>
+                        <a href="#">苏州婚纱摄影</a>
+                        <a href="#">天津婚纱摄影</a>
+                        <a href="#">青岛婚纱摄影</a>
+                        <a href="#">长沙婚纱摄影</a>
+                        <a href="#">郑州婚纱摄影</a>
+                        <a href="#">丽江婚纱摄影</a>
+                        <a href="#">西安婚纱摄影</a>
+                        <a>更多 ></a>
+                    </dd>
+                    <!--<dt></dt>--><!-- ▲ -->
+                </dl>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

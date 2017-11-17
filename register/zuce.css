@@ -1,0 +1,191 @@
+/*Í·²¿*/
+.nav {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+
+}
+
+.nav .logo{
+    width: 120px;
+    height: 100px;
+    line-height: 100px;
+
+    display: block;
+}
+.nav .logo img {
+    height: 55px;
+    width: 115px;
+
+}
+
+.nav {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+
+}
+
+.nav .logo{
+    width: 120px;
+    height: 100px;
+    line-height: 100px;
+
+    display: block;
+}
+.nav .logo img {
+    height: 55px;
+    width: 115px;
+
+}
+
+
+
+
+.container {
+    margin: 100px auto;
+    width: 600px;
+    padding: 50px;
+
+    border: 4px solid orange;
+    border-radius: 20px;
+
+}
+
+label {
+
+    margin-left: 20px;
+    width: 60px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #7edeff;
+    display: inline-block;
+    margin-top: 26px;
+}
+
+input {
+    border: solid 2px #fb6679;
+    width: 170px;
+    height: 20px;
+    margin-left: 30px;
+
+}
+
+
+
+span {
+    /*float: left;*/
+    width: 100px;
+    height: 20px;
+    /*display: block;*/
+
+    margin-left: 20px;
+    font-size: 12px;
+    /*padding: 2px 20px 0;*/
+    color: #cccccc;
+    /*background-color:red;*/
+}
+
+
+
+
+
+
+
+
+/*Î²²¿*/
+
+.foot{
+    width: 100%;
+    height: 300px;
+    min-width: 1200px;
+    background: #fafafa;
+    border-top: 1px solid #e7e7e7;
+    /* margin-top: 80px; */
+    float: left;
+}
+
+.foot1{
+    margin-top: 30px;
+    height: 180px;
+    clear: both;
+}
+.foot1 .ul1 {
+    width: 200px;
+    height: 180px;
+    float: left;
+}
+
+.foot1 .ul1 h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+
+}
+.foot1 .ul1 .tel{
+    padding-top: 20px;
+    color: #ff5165;
+    font-size: 24px;
+    font-family: Aria
+}
+.foot1 .ul2{
+    height: 180px;
+    width: 220px;
+    float: left;
+}
+.foot1 .ul2 h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.foot1 .ul3{
+    height: 180px;
+    width: 200px;
+    float: left;
+}
+.foot1 .ul3 h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.foot1 .ul4{
+    height: 180px;
+    width: 200px;
+    float: left;
+}
+.foot1 .ul4 h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.foot1 .ul4 li{
+    margin-top: 5px;
+}
+.foot1 .ul5{
+    height: 180px;
+    width: 360px;
+    float: left;
+}
+.foot1 .ul5 h3{
+    font-size: 20px;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+
+}
+
+.foot2 dt {
+    font-size: 16px;
+    color: #000;
+}
+.foot2 dd{
+    margin-top: 10px;
+}
+.foot2 dd a {
+    padding-right: 10px;
+
+}

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link rel="stylesheet" href="../css/base.css"/>-->
+    <link rel="stylesheet" href="../css/fym.css"/>
+    <link rel="stylesheet" href="底部.css"/>
+    <link rel="icon" href=""/>
+    <link rel="stylesheet" href="css/csh.css"/>
+    <link rel="stylesheet" href="css/head.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="./font_lhtvh4aorb7nl8fr/iconfont.css"/>
+    <script src="js/head.js"></script>
+    <script src="js/index.js"></script>
+    <script src="jquery-1.11.1.js"></script>
+    <style>
+       .box12 .abc{
+            display: block;
+        }
+    </style>
+    <script>
+
+        $(function () {
+
+            $('.nav12>ul>li').mouseenter(function () {
+//                $(this).css('border-bottom','0').siblings('li').css('border-bottom','1px solid #ccc');
+                $(this).css('color','red').siblings('li').css('color','');
+                $(this).css('background','pink').siblings('li').css('background','');
+
+                $('.nav12_z').eq($(this).index()).addClass('abc').slideDown(2000).siblings('div').removeClass('abc');
+
+
+            })
+
+
+            $( ".nav12 li").eq( 0).css( "background", "skyblue" );
+            $( ".nav12 li").eq( 0).css('border-radius','50px');
+            $('.nav12_z>ul').css('border-bottom',' 1px dashed skyblue')
+            $('.nav12').css('border-bottom','1px solid skyblue')
+
+            $('.nav12>ul').find('li').eq(0).mouseenter(function () {
+               $(this).css('background','skyblue');
+               $(this).css('border-radius','50px');
+
+                $('.box12').css('border',' 1px solid skyblue');
+                $('.nav12').css('border-bottom','1px solid skyblue')
+                $('.nav12_z>ul').css('border-bottom',' 1px dashed skyblue')
+
+
+
+            })
+            $('.nav12>ul').find('li').eq(1).mouseenter(function () {
+                $(this).css('border-radius','50px');
+                $(this).css('background','lightgreen').siblings('li').css('background','');
+                $('.box12').css('border',' 1px solid lightgreen');
+                $('.nav12').css('border-bottom','1px solid lightgreen')
+                $('.nav12_z>ul').css('border-bottom',' 1px dashed lightgreen')
+
+            })
+            $('.nav12>ul').find('li').eq(2).mouseenter(function () {
+                $(this).css('border-radius','50px');
+                $('.nav12_z>ul').css('border-bottom',' 1px dashed pink')
+                $('.box12').css('border',' 1px solid pink');
+                $('.nav12').css('border-bottom','1px solid pink')
+            })
+
+            $('.nav12>ul').find('li').eq(3).mouseenter(function () {
+                $(this).css('border-radius','50px');
+                $(this).css('background','orange').siblings('li').css('background,');
+                $('.box12').css('border',' 1px solid orange');
+                $('.nav12').css('border-bottom','1px solid orange')
+                $('.nav12_z>ul').css('border-bottom',' 1px dashed orange')
+
+            })
+
+
+
+
+
+                    //鼠标进入第一个a标签，span显示；
+            $('.hezi a').eq(0).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(0).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(0).on('mouseleave', function () {
+                var json={top:435};
+                $('.hezi a span').eq(0).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(1).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(1).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(1).on('mouseleave', function () {
+                var json={top:435};
+                $('.hezi a span').eq(1).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(2).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(2).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(2).on('mouseleave', function () {
+                var json={top:435};
+                $('.hezi a span').eq(2).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(3).on('mouseenter', function () {
+                var json={left:0};
+                $('.hezi a span').eq(3).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(3).on('mouseleave', function () {
+                var json={left:233};
+                $('.hezi a span').eq(3).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(4).on('mouseenter', function () {
+                var json={left:0};
+                $('.hezi a span').eq(4).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(4).on('mouseleave', function () {
+                var json={left:233};
+                $('.hezi a span').eq(4).stop(false,true).animate(json,300);
+
+            })
+            $('.hezi a').eq(5).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(5).stop(false,true).animate(json,300);
+
+
+            })
+            $('.hezi a').eq(5).on('mouseleave', function () {
+                var json={top:-435};
+                $('.hezi a span').eq(5).stop(false,true).animate(json,300);
+            })
+            $('.hezi a').eq(6).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(6).stop(false,true).animate(json,300);
+
+
+            })
+            $('.hezi a').eq(6).on('mouseleave', function () {
+                var json={top:-435};
+                $('.hezi a span').eq(6).stop(false,true).animate(json,300);
+            })
+
+            $('.hezi a').eq(7).on('mouseenter', function () {
+                var json={top:0};
+                $('.hezi a span').eq(7).stop(false,true).animate(json,300);
+
+
+            })
+            $('.hezi a').eq(7).on('mouseleave', function () {
+                var json={top:-435};
+                $('.hezi a span').eq(7).stop(false,true).animate(json,300);
+            })
+            $('.hezi a').eq(8).on('mouseenter', function () {
+                var json={left:0};
+                $('.hezi a span').eq(8).stop(false,true).animate(json,300);
+
+
+            })
+            $('.hezi a').eq(8).on('mouseleave', function () {
+                var json={left:-233};
+                $('.hezi a span').eq(8).stop(false,true).animate(json,300);
+            })
+            $('.hezi a').eq(9).on('mouseenter', function () {
+                var json={left:-0};
+                $('.hezi a span').eq(9).stop(false,true).animate(json,300);
+
+
+            })
+            $('.hezi a').eq(9).on('mouseleave', function () {
+                var json={left:-233};
+                $('.hezi a span').eq(9).stop(false,true).animate(json,300);
+            })
+
+
+
+
+
+
+
+
+
+
+
+            })
+
+    </script>
+</head>
+<body>
+<div class="Top">
+    <!--顶部广告-->
+    <div id="I-top"><i></i></div>
+    <!--顶部导航-->
+    <div id="I-top_nav">
+        <div class="w">
+            <div class="left" id="toggle1">
+                <i></i>
+                <div class="map">
+                    <i class="iconfont">&#xe64e;</i>
+                    <span>全国</span>
+                    <div class="toggle1">
+                        <a href="#">[切换]</a>
+                        <div class="h-map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="fon">
+                    <i class="iconfont" style="color: red">&#xe61b;</i>
+                    <div class="sj">
+                        <i></i>
+                        <a href="#">手机版</a>
+                        <div class="ewm"><div class="sjb"></div><span>手机版更方便</span></div>
+                    </div>
+                </div>
+            </div>
+            <p id="box"></p>
+            <div class="right">
+                <ul>
+                    <li><a href="#">登录</a></li>
+                    <li class="tow"><a href="#">合伙人招募</a><i></i></li>
+                    <li><a href="#">云科SaaS</a></li>
+                    <li><a href="#">婚礼墙</a></li>
+                    <li><a href="#">进入商家中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo区域-->
+<div id="Search">
+    <div class="w I-logo">
+        <div class="logo"></div>
+        <div class="seach">
+            <div class="inp">
+                <input class="input" type="text"/><input class="btn" type="button" value="搜索"/>
+            </div>
+            <ul>
+                <li>中式婚礼</li>
+                <li>草坪婚礼</li>
+                <li>蒂芙尼蓝</li>
+                <li>森系婚礼</li>
+            </ul>
+        </div>
+        <div class="tell">
+            <p>婚礼纪客服热线</p>
+            <h1>400-159-9090</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<!--................................................................-->
+        <div class="box12 w">
+            <div class="nav12">
+                <ul>
+                    <li>婚礼照</li>
+
+                    <li>婚礼布置</li>
+
+                    <li>婚礼礼服</li>
+
+                    <li>婚礼跟拍</li>
+                </ul>
+            </div>
+             <div class="nav12_z  color1  abc" id="">
+                <ul>
+                    <span>风格 :</span>
+                   <a href="#">全部</a>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+                    <li>复古</li>
+                    <li>前卫</li>
+
+
+                </ul>
+                <span>场景 :</span>
+                <a href="#">全部</a>
+                <ul>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+
+                </ul>
+
+            </div>
+            <div class="nav12_z  color2">
+                <ul>
+                    <span>风格 :</span>
+                    <a href="#">全部</a>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+                    <li>复古</li>
+                    <li>前卫</li>
+
+
+                </ul>
+                <span>场景 :</span>
+                <a href="#">全部</a>
+                <ul>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+
+                </ul>
+            </div>
+            <div class="nav12_z color3">
+                <ul>
+                    <span>风格 :</span>
+                    <a href="#">全部</a>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+                    <li>复古</li>
+
+
+
+                </ul>
+                <span>场景 :</span>
+                <a href="#">全部</a>
+                <ul>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+
+
+                </ul>
+            </div>
+            <div class="nav12_z color4">
+                <ul>
+                    <span>风格 :</span>
+                    <a href="#">全部</a>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+                    <li>复古</li>
+
+
+
+                </ul>
+                <span>场景 :</span>
+                <a href="#">全部</a>
+                <ul>
+                    <li>韩式</li>
+                    <li>纪实</li>
+                    <li>森系</li>
+                    <li>轻奢</li>
+                    <li>时尚</li>
+                    <li>性感</li>
+                    <li>中式</li>
+                    <li>小清溪</li>
+                    <li>欧式</li>
+                    <li>英伦</li>
+                    <li>简约</li>
+                    <li>日系</li>
+                    <li>文艺</li>
+                    <li>黑白</li>
+                    <li>唯美</li>
+
+
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="center"></div>
+
+        <div class="hezi w">
+
+            <a href="#"><img src="../img/1-1FZ1120249615.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu">
+                    </span>
+            </a>
+
+            <a href="#">
+                <img src="../img/1-1FZ1120A1X6.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu">
+
+                    </span>
+            </a>
+            <a href="#"><img src="../img/1-1FZ1115932448.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+            <a href="#"><img src="../img/1-1FQ51423395Q.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+            <a href="#"><img src="../img/1-1FF51954020-L.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+
+
+
+        </div>
+        <div class="hezi w" id="hezi2">
+
+            <a href="#"><img src="../img/1-1FF51952520-L.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu">
+                    </span>
+            </a>
+
+            <a href="#">
+                <img src="../img/1-1FF51955080-L.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu">
+
+                    </span>
+            </a>
+            <a href="#"><img src="../img/1-1F30G60U90-L.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+            <a href="#"><img src="../img/1-1F30G609350-L.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+            <a href="#"><img src="../img/1-1F114151H3X0.jpg" alt=""/>
+                <b>MISSLUNA客片</b>
+                <span class="danchu"></span>
+            </a>
+
+        </div>
+
+
+
+<!--.................................................-->
+        <div class="foot">
+            <div class="foot-me w">
+                <div class="ul1">
+                    <h3>婚礼纪客服热线</h3>
+                    <ul>
+                        <li>工作时间：每日9:00~23:00</li>
+                        <li class="tel">400-159-9090</li>
+                    </ul>
+                </div>
+                <div class="ul2">
+                    <h3>下载婚礼纪手机版</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img  src="erweima.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ul3">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li class="weichat">
+                            <a>微信公众号</a>
+                            <dl>
+                                <dt class="dt1"></dt>
+                                <dt class="dt2"></dt>
+                                <dd>
+                                    <img src="weixin.jpg">
+                                    <br>婚礼纪微信服务号</dd>
+                            </dl>
+                        </li>
+                        <li class="xinl">
+                            <a  href="">新浪微博</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ul4">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li>
+                            <a >关于婚礼纪</a>
+                        </li>
+                        <li>
+                            <a>加入我们</a>
+                        </li>
+                        <li><a >联系我们</a></li>
+                        <li><a >合伙人招募</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ul5">
+                    <h3>联系我们</h3>
+                    <ul><!--<li>商务、媒体合作QQ：2652330317</li>-->
+                        <li>反馈邮箱：support@hunliji.com</li>
+                        <li>通讯地址：浙江省杭州市西湖区文一西路98号数娱大厦408</li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+            <div class="hotcitys clearfix w" style="width: 1200px;">
+                <dl>
+                    <dt>热门城市：</dt>
+                    <dd><a href="#">北京婚纱摄影</a>
+                        <a href="#">上海婚纱摄影</a>
+                        <a href="#">杭州婚纱摄影</a>
+                        <a href="#">成都婚纱摄影</a>
+                        <a href="#">深圳婚纱摄影</a>
+                        <a href="#">武汉婚纱摄影</a>
+                        <a href="#">三亚婚纱摄影</a>
+                        <a href="#">厦门婚纱摄影</a>
+                        <a href="#">广州婚纱摄影</a>
+                        <a href="#">南京婚纱摄影</a>
+                        <a href="#">重庆婚纱摄影</a>
+                        <a href="#">苏州婚纱摄影</a>
+                        <a href="#">天津婚纱摄影</a>
+                        <a href="#">青岛婚纱摄影</a>
+                        <a href="#">长沙婚纱摄影</a>
+                        <a href="#">郑州婚纱摄影</a>
+                        <a href="#">丽江婚纱摄影</a>
+                        <a href="#">西安婚纱摄影</a>
+                        <a href="#" style="margin-left: 30px; color: #666;">更多></a>
+                    </dd><!--<dt></dt>--><!-- ▲ -->
+                </dl>
+            </div>
+            <div class="linkcom clearfix">
+                <div class="link">
+                    <span class="link_title">友情链接：</span>
+                    <div class="link_list_cont">
+                        <div style="width: 7964px; left: -770px;" class="link_list">
+                            <div class="link_items">
+                                <a href="#">十大家纺排行榜</a>
+                                <a href="#">鲜花网</a>
+                                <a href="#">婚戒</a>
+                                <a href="#">钻戒品牌</a>
+                                <a href="#">小笑话</a>
+                                <a href="#">返利网</a>
+                                <a href="#">邯郸在线</a>
+                                <a href="#">泡妞</a>
+                                <a href="#">单机游戏下载</a>
+                                <a href="#">微信营销</a>
+                                <a href="#">长沙房产网</a>
+                                <a href="#">手表论坛</a>
+                                <a href="#">伴奏中国</a>
+                                <a href="#">万网</a>
+                                <a href="#">中国专利网</a>
+                                <a href="#">影楼</a>
+                                <a href="#">小视频</a>
+                                <a href="#">雷锋PPT网</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">家居建材网</a>
+                                <a href="#">整形</a>
+                                <a href="#">中国总裁网</a>
+                                <a href="#">直播吧</a>
+                                <a href="#">网站建设</a>
+                                <a href="#">词典</a>
+                                <a href="#">公司评价</a>
+                                <a href="#">健康无忧网</a>
+                                <a href="#">网站优化</a>
+                                <a href="#">政府采购网</a>
+                                <a href="#">奇闻异事</a>
+                                <a href="#">化妆品品牌</a>
+                            </div>
+                            <div class="link_items">
+                                <a href="#">十大家纺排行榜</a>
+                                <a href="#">鲜花网</a>
+                                <a href="#">婚戒</a>
+                                <a href="#">钻戒品牌</a>
+                                <a href="#">小笑话</a>
+                                <a href="#">返利网</a>
+                                <a href="#">邯郸在线</a>
+                                <a href="#">泡妞</a>
+                                <a href="#">单机游戏下载</a>
+                                <a href="#">微信营销</a>
+                                <a href="#">长沙房产网</a>
+                                <a href="#">手表论坛</a>
+                                <a href="#">伴奏中国</a>
+                                <a href="#">万网</a>
+                                <a href="#">中国专利网</a>
+                                <a href="#">影楼</a>
+                                <a href="#">小视频</a>
+                                <a href="#">雷锋PPT网</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">家居建材网</a>
+                                <a href="#">整形</a>
+                                <a href="#">中国总裁网</a>
+                                <a href="#">直播吧</a>
+                                <a href="#">网站建设</a>
+                                <a href="#">词典</a>
+                                <a href="#">公司评价</a>
+                                <a href="#">健康无忧网</a>
+                                <a href="#">网站优化</a>
+                                <a href="#">政府采购网</a>
+                                <a href="#">奇闻异事</a>
+                                <a href="#">化妆品品牌</a>
+                            </div>
+                            <div class="link_items">
+                                <a href="#">十大家纺排行榜</a>
+                                <a href="#">鲜花网</a>
+                                <a href="#">婚戒</a>
+                                <a href="#">钻戒品牌</a>
+                                <a href="#">小笑话</a>
+                                <a href="#">返利网</a>
+                                <a href="#">邯郸在线</a>
+                                <a href="#">泡妞</a>
+                                <a href="#">单机游戏下载</a>
+                                <a href="#">微信营销</a>
+                                <a href="#">长沙房产网</a>
+                                <a href="#">手表论坛</a>
+                                <a href="#">伴奏中国</a>
+                                <a href="#">万网</a>
+                                <a href="#">中国专利网</a>
+                                <a href="#">影楼</a>
+                                <a href="#">小视频</a>
+                                <a href="#">雷锋PPT网</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">家居建材网</a>
+                                <a href="#">整形</a>
+                                <a href="#">中国总裁网</a>
+                                <a href="#">直播吧</a>
+                                <a href="#">网站建设</a>
+                                <a href="#">词典</a>
+                                <a href="#">公司评价</a>
+                                <a href="#">健康无忧网</a>
+                                <a href="#">网站优化</a>
+                                <a href="#">政府采购网</a>
+                                <a href="#">奇闻异事</a>
+                                <a href="#">化妆品品牌</a>
+                            </div>
+                            <div class="link_items">
+                                <a href="#">十大家纺排行榜</a>
+                                <a href="#">鲜花网</a>
+                                <a href="#">婚戒</a>
+                                <a href="#">钻戒品牌</a>
+                                <a href="#">小笑话</a>
+                                <a href="#">返利网</a>
+                                <a href="#">邯郸在线</a>
+                                <a href="#">泡妞</a>
+                                <a href="#">单机游戏下载</a>
+                                <a href="#">微信营销</a>
+                                <a href="#">长沙房产网</a>
+                                <a href="#">手表论坛</a>
+                                <a href="#">伴奏中国</a>
+                                <a href="#">万网</a>
+                                <a href="#">中国专利网</a>
+                                <a href="#">影楼</a>
+                                <a href="#">小视频</a>
+                                <a href="#">雷锋PPT网</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">网上花店</a>
+                                <a href="#">家居建材网</a>
+                                <a href="#">整形</a>
+                                <a href="#">中国总裁网</a>
+                                <a href="#">直播吧</a>
+                                <a href="#">网站建设</a>
+                                <a href="#">词典</a>
+                                <a href="#">公司评价</a>
+                                <a href="#">健康无忧网</a>
+                                <a href="#">网站优化</a>
+                                <a href="#">政府采购网</a>
+                                <a href="#">奇闻异事</a>
+                                <a href="#">化妆品品牌</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var listWidth = 0,
+                            listContWidth = $('.link_list_cont').width(),
+                            oList = $('.link_list'),
+                            aListItem = $('.link_list a');
+                    for(var i=0; i<aListItem.length; i++) {
+                        listWidth += parseInt(aListItem.eq(i).outerWidth());
+                    }
+                    oList.width(listWidth);
+                    if(listWidth > listContWidth) {
+                        scroll();
+                    }
+                    function scroll() {
+                        oList.width(listWidth*2);
+                        oList.append($('.link_items').clone());
+                        var offsetLeft = 0;
+
+                        var timer = setInterval(function() {
+                            offsetLeft = parseInt(oList.css('left')) - 1;
+                            oList.css('left', offsetLeft);
+                            if(offsetLeft <= (-listWidth+1)) {
+                                oList.css('left', 0);
+                                offsetLeft = 0;
+                            }
+                        }, 40);
+
+                        $('.link_list a').hover(function() {
+                            clearInterval(timer);
+                        }, function() {
+                            timer = setInterval(function() {
+                                offsetLeft = parseInt(oList.css('left')) - 1;
+                                oList.css('left', offsetLeft);
+                                if(offsetLeft <= (-listWidth+1)) {
+                                    oList.css('left', 0);
+                                    offsetLeft = 0;
+                                }
+                            }, 40);
+                        })
+                    }
+                </script>
+                <p>浙ICP备13004478号 © 杭州火烧云科技有限公司</p>
+            </div>
+        </div>
+        <div class="box1"></div>
+
+        <script>
+            var box = $(".box1")[0];
+            var i = 0;
+            var setval = setInterval(function() {
+                var num1 = Math.round(Math.random() * 1340) - 100;
+                var num2 = Math.round(Math.random() * 1340) - 100;
+                var snow = document.createElement("span");
+                snow.setAttribute("class", "span" + i);
+                box.appendChild(snow);
+                snow.style.fontSize = "44px";
+                snow.innerHTML = "*";
+                snow.style.color = 'rgb('+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+')'
+                ;
+                snow.style.position = "absolute";
+                snow.style.top = "-44px";
+                snow.style.left = num1 + "px";
+                $(".box span").animate({
+                    top: "100%",
+                    left: num2 + "px"
+                }, 10000, function() {
+                    $(this).remove();
+                });
+
+
+                i++;
+            }, 200);
+        </script>
+        <script>
+            function time() {
+                var today = new Date();
+                var nian = today.getFullYear(); //年
+                var yue = (today.getMonth() + 1); //月
+                var ri = today.getDate(); //日
+                var shi = today.getHours(); //时
+                var feng = today.getMinutes(); //分
+                var miao = today.getSeconds(); //秒
+                var xingqi = today.getDay();
+
+                var v;
+                if (shi >= 12) {
+                    v = "PM";
+                } else {
+                    v = "AM";
+                }
+
+                var xingqis;
+                switch (xingqi) {
+                    case 1:
+                        xingqis = "星期一";
+                        break;
+                    case 2:
+                        xingqis = "星期二";
+                        break;
+                    case 3:
+                        xingqis = "星期三";
+                        break;
+                    case 4:
+                        xingqis = "星期四";
+                        break;
+                    case 5:
+                        xingqis = "星期五";
+                        break;
+                    case 6:
+                        xingqis = "星期六";
+                        break;
+                    default:
+                        xingqis = "星期日";
+                }
+
+                document.getElementById("box").innerHTML = nian + "年" + yue + '月' + ri + "日 " +
+                        shi + ':' + feng + ":" + miao + " " + v + " " + xingqis;
+            }
+            setInterval("time()", 1000);
+        </script>
+        <audio src="齐晨%20-%20咱们结婚吧.mp3" autoplay loop  ></audio>
+</body>
+</html>
